@@ -1,6 +1,6 @@
 //your JS code here. If required.
 function dayOfYear(year) {
-	if(years % 400 !== 0 )
+	if(years % 400 === 0 )
 	{
 		return 366;
 	}
