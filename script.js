@@ -1,13 +1,21 @@
-//your JS code here. If required.
-function dayOfAYear(year) {
-    // Check if it's a leap year
-    if(year % 4 == 0) {
+function daysOfAYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
         return 366; // Leap year
+      } else {
+        return 365; // Not a leap year
+      }
     } else {
-        return 365; // Non-leap year
+      return 366; // Leap year
     }
+  } else {
+    return 365; // Not a leap year
+  }
 }
-dayOfYear(2022)
-dayOfAYear(2024)	
-dayOfAYear(1900)	
-dayOfAYear(2000)
+
+// Examples
+console.log(daysOfAYear(2022)); // 365
+console.log(daysOfAYear(2024)); // 366
+console.log(daysOfAYear(1900)); // 365
+console.log(daysOfAYear(2000)); // 366
